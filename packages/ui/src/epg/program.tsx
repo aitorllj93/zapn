@@ -56,7 +56,7 @@ export default ({ channel, program, ...rest }: Props) => {
         data.providedBy
         ?.provider as keyof typeof providerBackgrounds
         ] || providerBackgrounds.default) as string)
-      : "rgba(100, 100, 100, 0.3)",
+      : "var(--border)",
     [isLive, data.providedBy]
   );
 
@@ -70,7 +70,7 @@ export default ({ channel, program, ...rest }: Props) => {
   return (
     <div className="epg-program-item" onClick={onClick} title={title}>
       <ProgramBox width={styles.width} style={styles.position}
-        className="hover:z-10 hover:w-auto!">
+        className="hover:z-10 hover:w-auto! hover:brightness-90 dark:hover:brightness-120">
         <ProgramContent
           width={styles.width}
           isLive={isLive}
