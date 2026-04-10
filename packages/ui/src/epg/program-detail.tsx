@@ -35,15 +35,15 @@ const ProgramDetail = ({ channel, program, since, till, open, onOpenChange }: Pr
     <Dialog open={open}>
       <DialogContent>
         <div className={cn(
-          program.image && "bg-linear-to-b from-black/80 to-black/0 rounded-md"
+          program.image && "bg-linear-to-b from-black/80 to-black/0 rounded-xl"
         )}>
           {program.image ?
             <figure>
-              <img src={program.image} className="absolute rounded-md mask-[linear-gradient(to_bottom,black_70%,transparent)]" />
+              <img src={program.image} className="absolute rounded-xl mask-[linear-gradient(to_bottom,black_70%,transparent)]" />
             </figure> :
             null
           }
-          <div className="pt-32 p-4 relative bg-linear-to-b from-black/80 to-black/0 rounded-md">
+          <div className="pt-32 p-4 relative bg-linear-to-b from-black/80 to-black/0 rounded-xl">
             <div className="flex justify-between text-muted/60 mb-3 gap-2">
               <div>
                 <h3
@@ -71,11 +71,11 @@ const ProgramDetail = ({ channel, program, since, till, open, onOpenChange }: Pr
                 {program.description}
               </p>
             </div>
-            <div>
+            <div className="flex justify-end">
               <a href={channel.watchUrl ?? channel.url}>
                 <Button>
                   {channel.logo ? <img
-                    className="brightness-0 invert p-2 h-full rounded-t-md md:rounded-t-lg mx-auto"
+                    className="brightness-0 invert p-2 h-full mx-auto"
                     src={channel.logo}
                     alt={channel.name}
                   /> : null}
