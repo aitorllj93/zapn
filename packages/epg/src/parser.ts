@@ -59,6 +59,7 @@ type XMLChannel = {
 
   icon?: string;
   category?: string;
+  watch_url?: string;
 }
 
 type XMLChannels = {
@@ -158,7 +159,7 @@ const mapChannel = (channel: XMLEPGChannel, xmlChannel: XMLChannel, provider: st
     name: channel["display-name"] ?? '',
     url: channel.url,
     category: xmlChannel.category,
-    watchUrl: getChannelWatchUrlByProvider(xmlChannel, provider),
+    watchUrl: xmlChannel.watch_url ?? getChannelWatchUrlByProvider(xmlChannel, provider),
     provider,
   };
 }
