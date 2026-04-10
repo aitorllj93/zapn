@@ -1,0 +1,30 @@
+{
+  "name": "admin",
+  "version": "0.1.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --port 3001",
+    "build": "next build",
+    "start": "next start",
+    "lint": "biome check --write",
+    "check-types": "next typegen && tsc --noEmit"
+  },
+  "dependencies": {
+    "@next/env": "npm:@varlock/nextjs-integration@^0.3.3",
+    "@varlock/nextjs-integration": "^0.3.3",
+    "@zapn/ui": "workspace:*",
+    "next": "16.2.3",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "varlock": "^0.7.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.3",
+    "@types/react": "19.2.2",
+    "@types/react-dom": "19.2.2",
+    "@zapn/biome-config": "workspace:^",
+    "@zapn/typescript-config": "workspace:*",
+    "typescript": "5.9.2"
+  }
+}

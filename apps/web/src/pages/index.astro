@@ -1,0 +1,15 @@
+---
+import { repository } from "@/lib/epg";
+import Header from '@zapn/ui/header/index';
+import ChannelsGrid from '@zapn/ui/channels-grid/index';
+
+import Layout from '../layouts/Layout.astro';
+
+const channels = await repository.getChannels();
+---
+<Layout>
+	<main>
+		<Header />
+		<ChannelsGrid channels={channels}>
+	</main>
+</Layout>

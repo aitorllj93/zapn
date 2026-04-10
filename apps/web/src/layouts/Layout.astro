@@ -1,0 +1,20 @@
+---
+import { Font } from "astro:assets";
+
+import "@zapn/ui/styles.css";
+---
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/zapn/favicon.svg" />
+		<title>ZAPN</title>
+		<meta name="description" content="Parrilla de Televisión" />
+    <Font cssVariable="--font-sans" />
+    <Font cssVariable="--font-heading" />
+	</head>
+	<body class="bg-background text-foreground font-sans">
+		<slot />
+	</body>
+</html>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<channels>
+  <channel site="programacion-tv.elpais.com" category="General" site_id="3" lang="es" xmltv_id="La1.es@SD" icon="https://upload.wikimedia.org/wikipedia/commons/1/1b/Logo_La_1.svg">La 1</channel>
+  <channel site="programacion-tv.elpais.com" category="General" site_id="4" lang="es" xmltv_id="La2.es@SD" icon="https://upload.wikimedia.org/wikipedia/commons/1/1f/Logo_La_2.svg">La 2</channel>
+  <channel site="programacion-tv.elpais.com" category="General" site_id="2" lang="es" xmltv_id="Antena3.es@National" icon="https://upload.wikimedia.org/wikipedia/commons/6/65/Antena_3_2025_%28sin_wordmark%29.svg">Antena 3</channel>
+  <channel site="programacion-tv.elpais.com" category="General" site_id="496" lang="es" xmltv_id="Cuatro.es@SD" icon="https://upload.wikimedia.org/wikipedia/commons/0/08/Cuatro_logo.png">Cuatro</channel>
+  <channel site="programacion-tv.elpais.com" category="General" site_id="1" lang="es" xmltv_id="Telecinco.es@SD" icon="https://upload.wikimedia.org/wikipedia/commons/f/fc/Telecinco.svg">Telecinco</channel>
+  <channel site="programacion-tv.elpais.com" category="General" site_id="510" lang="es" xmltv_id="LaSexta.es@SD" icon="https://upload.wikimedia.org/wikipedia/commons/9/93/La_Sexta_%28A3M%29.svg">laSexta</channel>
+  <channel site="programacion-tv.elpais.com" category="Animación" site_id="505" lang="es" xmltv_id="Clan.es@SD" icon="https://upload.wikimedia.org/wikipedia/commons/8/81/Clan_logo.svg">Clan TVE</channel>
+  <channel site="programacion-tv.elpais.com" category="General" site_id="8" lang="es" xmltv_id="24Horas.es@SD" icon="https://upload.wikimedia.org/wikipedia/commons/2/2b/Logo_Canal_24_horas.svg">Canal 24 h</channel>
+  <channel site="programacion-tv.elpais.com" category="General" site_id="509" lang="es" xmltv_id="Nova.es@SD" icon="https://upload.wikimedia.org/wikipedia/commons/1/1e/Nova.svg">Nova</channel>
+  <channel site="programacion-tv.elpais.com" category="General" site_id="508" lang="es" xmltv_id="Neox.es@SD" icon="https://upload.wikimedia.org/wikipedia/commons/3/3c/Neox_2023_logo.svg">Neox</channel>
+  <channel site="programacion-tv.elpais.com" category="General" site_id="841" lang="es" xmltv_id="Mega.es@SD" icon="https://upload.wikimedia.org/wikipedia/commons/8/8c/MEGA.svg">Mega</channel>
+  <channel site="programacion-tv.elpais.com" category="General" site_id="506" lang="es" xmltv_id="FactoriadeFiccion.es@SD" icon="https://upload.wikimedia.org/wikipedia/commons/4/42/Factor%C3%ADa_de_Ficci%C3%B3n.svg">FDF Telecinco</channel>
+  <channel site="programacion-tv.elpais.com" category="General" site_id="709" lang="es" xmltv_id="Energy.es@SD" icon="https://upload.wikimedia.org/wikipedia/commons/9/93/Energy_2012.png">Energy</channel>
+  <channel site="programacion-tv.elpais.com" category="General" site_id="697" lang="es" xmltv_id="Divinity.es@SD" icon="https://upload.wikimedia.org/wikipedia/commons/7/71/Divinity_%282012%29.svg">Divinity</channel>
+  <channel site="programacion-tv.elpais.com" category="Animación" site_id="665" lang="es" xmltv_id="Boing.es@SD" icon="https://upload.wikimedia.org/wikipedia/commons/9/95/Boing_2020.svg">Boing</channel>
+  <channel site="programacion-tv.elpais.com" category="Cocina" site_id="183" lang="es" xmltv_id="CanalCocina.es@SD" icon="https://yt3.googleusercontent.com/es9x_1lJ88eVkP0E9qXhz10B8WUiAgfJBr8YY0FKb31Tl2LT-EQQ-nBqU8VCvcOpfI0mUVUfpnI=s900-c-k-c0x00ffffff-no-rj">Canal Cocina</channel>
+  <channel site="programacion-tv.elpais.com" category="Documentales" site_id="148" lang="es" xmltv_id="Historia.es@SD" icon="https://upload.wikimedia.org/wikipedia/commons/f/f5/History_Logo.svg">Historia</channel>
+  <channel site="programacion-tv.elpais.com" category="Documentales" site_id="151" lang="es" xmltv_id="NationalGeographic.es@SD" icon="https://i.pinimg.com/474x/d2/d8/d6/d2d8d6792e712a86387eb56d95a250fe.jpg">National Geographic</channel>
+</channels>

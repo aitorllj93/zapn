@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<channels>
+  <channel site="pluto.tv" site_id="68d566603d3a9580eb461251" lang="es" xmltv_id="ParamountNetwork@PlutoTV">Paramount Network</channel>
+  <channel site="pluto.tv" site_id="6995daa579545c21a10e84de" lang="es" xmltv_id="BasadasEnLibros@PlutoTV">Basadas en libros</channel>
+  <channel site="pluto.tv" site_id="68751a3bfd6704e9d3cc7b3d" lang="es" xmltv_id="PequeñosAventureros@PlutoTV">Pequeños aventureros</channel>
+  <channel site="pluto.tv" site_id="65cf6ab58145cb0008129ca8" lang="es" xmltv_id="SeriesCriminales@PlutoTV">Series Criminales</channel>
+  <channel site="pluto.tv" site_id="654a35ce346f420008d5c36e" lang="es" xmltv_id="InvasionAlien@PlutoTV">Invasión Alien</channel>
+  <channel site="pluto.tv" site_id="64ddcbb14c5ed80008fad416" lang="es" xmltv_id="CrimenHistoria@PlutoTV">Crimen e Historia</channel>
+  <channel site="pluto.tv" site_id="64a3f200f238ce0008d47247" lang="es" xmltv_id="TrueCrime@PlutoTV">True Crime</channel>
+  <channel site="pluto.tv" site_id="61b87bc867b03a0007864e0d" lang="es" xmltv_id="Reality@PlutoTV">Reality</channel>
+  <channel site="pluto.tv" site_id="68adc697116b783a33f99e6c" lang="es" xmltv_id="Impacto@PlutoTV">Impacto</channel>
+  <channel site="pluto.tv" site_id="6080345ebb49b90007ce0baf" lang="es" xmltv_id="Motor@PlutoTV">Motor</channel>
+  <channel site="pluto.tv" site_id="65bd0f53dc10a40008e68b96" lang="es" xmltv_id="Gasolina@PlutoTV">Gasolina</channel>
+  <channel site="pluto.tv" site_id="5f1ac2591dd8880007bb7d6d" lang="es" xmltv_id="CineAccion@PlutoTV">Cine Acción</channel>
+  <channel site="pluto.tv" site_id="645a309c5a0cd5000873f609" lang="es" xmltv_id="Catastrofes@PlutoTV">Catástrofes</channel>
+  <channel site="pluto.tv" site_id="5f6a38eaa5b68b0007a00e7a" lang="es" xmltv_id="SciFi@PlutoTV">Sci-Fi</channel>
+  <channel site="pluto.tv" site_id="65ce480a78df2200131c597b" lang="es" xmltv_id="Psycho@PlutoTV">Psycho</channel>
+  <channel site="pluto.tv" site_id="5f1ac8a87cd38d000745d7cf" lang="es" xmltv_id="Thrillers@PlutoTV">Thrillers</channel>
+  <channel site="pluto.tv" site_id="5f1ac1f1b66c76000790ef27" lang="es" xmltv_id="CineEstelar@PlutoTV">Cine Estelar</channel>
+  <channel site="pluto.tv" site_id="5f1ac947dcd00d0007937c08" lang="es" xmltv_id="CineDrama@PlutoTV">Cine Drama</channel>
+  <channel site="pluto.tv" site_id="5f1ac8099c49f600076579b2" lang="es" xmltv_id="CineComedia@PlutoTV">Cine Comedia</channel>
+  <channel site="pluto.tv" site_id="655b5d865812e80008843bd1" lang="es" xmltv_id="ComediasRomanticas@PlutoTV">Comedias Románticas</channel>
+  <channel site="pluto.tv" site_id="5f1ac9a2d3611d0007a844bb" lang="es" xmltv_id="CineRomantico@PlutoTV">Cine Romántico</channel>
+  <channel site="pluto.tv" site_id="676e7b4a4bd636000819c6a7" lang="es" xmltv_id="SensaCine@PlutoTV">SensaCine</channel>
+  <channel site="pluto.tv" site_id="6086d3f420fc8500075f8dbf" lang="es" xmltv_id="Runtime@PlutoTV">Runtime</channel>
+  <channel site="pluto.tv" site_id="61373bb45168fe000773eecd" lang="es" xmltv_id="CineClasico@PlutoTV">Cine Clásico</channel>
+  <channel site="pluto.tv" site_id="60cc807324d60a0007708dc8" lang="es" xmltv_id="CineDeAutor@PlutoTV">Cine de autor</channel>
+  <channel site="pluto.tv" site_id="6385e82900ab2e000768a058" lang="es" xmltv_id="Western@PlutoTV">Western</channel>
+  <channel site="pluto.tv" site_id="612ce5214bb5790007ad3016" lang="es" xmltv_id="Paranormal@PlutoTV">Paranormal</channel>
+  <channel site="pluto.tv" site_id="6267d4d1fb694f0007a6af0e" lang="es" xmltv_id="Horror@PlutoTV">Horror</channel>
+  <channel site="pluto.tv" site_id="68de3db35fc0afe85de0b843" lang="es" xmltv_id="ComediaALoBestia@PlutoTV">Comedia a lo bestia</channel>
+  <channel site="pluto.tv" site_id="5f1abce155a03d0007718834" lang="es" xmltv_id="ComediaMadeInSpain@PlutoTV">Comedia made in Spain</channel>
+  <channel site="pluto.tv" site_id="662a69daa0a74e00087a1c72" lang="es" xmltv_id="TelenovelasClasicas@PlutoTV">Telenovelas Clásicas</channel>
+  <channel site="pluto.tv" site_id="60b4c06717da110007ee1af6" lang="es" xmltv_id="Telenovelas@PlutoTV">Telenovelas</channel>
+  <channel site="pluto.tv" site_id="6475bfec536e0c0008858e9f" lang="es" xmltv_id="KDrama@PlutoTV">K-Drama</channel>
+  <channel site="pluto.tv" site_id="5f1ac8f49205650007bc15f1" lang="es" xmltv_id="Series@PlutoTV">Series</channel>
+  <channel site="pluto.tv" site_id="60dafb9a0df1ba000758d37b" lang="es" xmltv_id="BBCSeries@PlutoTV">BBC Series</channel>
+  <channel site="pluto.tv" site_id="600ae6a78d801e0007117d21" lang="es" xmltv_id="Animales@PlutoTV">Animales</channel>
+  <channel site="pluto.tv" site_id="61cd7b49543066000713b620" category="Documentales" lang="es" xmltv_id="Historia@PlutoTV">Historia</channel>
+  <channel site="pluto.tv" site_id="67517f923a61d40008c451f0" category="Documentales" lang="es" xmltv_id="HistoriaYVida@PlutoTV">Historia y Vida</channel>
+  <channel site="pluto.tv" site_id="60dd6b1da79e4d0007309455" lang="es" xmltv_id="NatureTime@PlutoTV">Nature Time</channel>
+  <channel site="pluto.tv" site_id="5f1acdaa8ba90f0007d5e760" lang="es" xmltv_id="Cocina@PlutoTV">Cocina</channel>
+  <channel site="pluto.tv" site_id="690dd10a37b131228d76d5b1" lang="es" xmltv_id="ElMueble@PlutoTV">El Mueble</channel>
+  <channel site="pluto.tv" site_id="64db2e0835425100080f2f5a" lang="es" xmltv_id="Diseño@PlutoTV">Diseño</channel>
+  <channel site="pluto.tv" site_id="65786abdb3801200084c593a" lang="es" xmltv_id="Homeful@PlutoTV">Homeful</channel>
+  <channel site="pluto.tv" site_id="622f42b831233300078658cc" lang="es" xmltv_id="CiudadanosPorElMundo@PlutoTV">Ciudadanos por el mundo</channel>
+  <channel site="pluto.tv" site_id="6880aa28164eb4890282e803" category="Animación" lang="es" xmltv_id="Toons@PlutoTV">Toons</channel>
+  <channel site="pluto.tv" site_id="691ddf2a3ae32cf55263476d" category="Animación" lang="es" xmltv_id="ForeverKids@PlutoTV">Forever Kids</channel>
+  <channel site="pluto.tv" site_id="6888928eb52fb742416673d2" category="Animación" lang="es" xmltv_id="MattelJunior@PlutoTV">Mattel Junior</channel>
+  <channel site="pluto.tv" site_id="60d3583ef310610007fb02b1" lang="es" xmltv_id="Euronews@PlutoTV">Euronews</channel>
+  <channel site="pluto.tv" site_id="66c45c0de7f5e80008b82005" lang="es" xmltv_id="CNNHeadlines@PlutoTV">CNN Headlines</channel>
+  <channel site="pluto.tv" site_id="608035b8d8705f0007260287" category="Animación" lang="es" xmltv_id="Anime@PlutoTV">Anime</channel>
+</channels>

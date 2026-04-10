@@ -1,0 +1,37 @@
+---
+import EPG from "@zapn/ui/epg";
+
+import Layout from "@/layouts/Layout.astro";
+import { repository } from "@/lib/epg";
+
+export async function getStaticPaths() {
+  const guides = await repository.getGuides();
+  return guides.map((g) => ({
+    params: {
+      provider: g.provider,
+    },
+  }));
+}
+
+const { provider } = Astro.params;
+
+const guide = await repository.getGuide({
+  provider,
+});
+
+if (!guide) {
+  return new Response(null, {
+    status: 404,
+  });
+}
+---
+<Layout>
+  <main>
+    <EPG
+      client:load
+      channels={guide.channels}
+      programs={guide.programs}
+      style={{ height: "100dvh", width: "100dvw" }}
+    />
+  </main>
+</Layout>
