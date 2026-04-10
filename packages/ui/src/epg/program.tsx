@@ -4,13 +4,11 @@ import {
   ProgramContent,
   ProgramFlex,
   ProgramStack,
-  ProgramTitle,
-  ProgramText,
   ProgramImage,
   useProgram,
 } from "planby";
-import { useState } from "react";
-import { up } from "../hooks/use-breakpoint";
+import { useMemo, useState } from "react";
+
 import ProgramDetail from "./program-detail";
 import { cn } from "../lib/utils";
 
@@ -39,22 +37,31 @@ export type Props = ProgramItem & {
 
 export default ({ channel, program, ...rest }: Props) => {
   const { data } = program;
-  const { image, title, since, till } = data;
+  const { title, since, till } = data;
 
   const [isOpen, setIsOpen] = useState(false);
-  const { styles, formatTime, set12HoursTimeFormat, isLive, isMinWidth } =
+
+  const { styles, formatTime, set12HoursTimeFormat, isLive } =
     useProgram({
       program,
       ...rest,
-      minWidth: !image ? 100 : 150
     });
+  styles.position.minWidth = styles.width;
 
-  const isDesktop = up("md");
+  const image = isLive ? data.image : undefined;
 
-  const isActive = false;
+  const background = useMemo(() => 
+    isLive
+      ? ((providerBackgrounds[
+        data.providedBy
+        ?.provider as keyof typeof providerBackgrounds
+        ] || providerBackgrounds.default) as string)
+      : "rgba(100, 100, 100, 0.3)",
+    [isLive, data.providedBy]
+  );
 
-  const sinceTime = formatTime(since, set12HoursTimeFormat()).toLowerCase();
-  const tillTime = formatTime(till, set12HoursTimeFormat()).toLowerCase();
+  const sinceTime = useMemo(() => formatTime(since, set12HoursTimeFormat()).toLowerCase(), [since]);
+  const tillTime = useMemo(() => formatTime(till, set12HoursTimeFormat()).toLowerCase(), [till]);
 
   const onClick = () => {
     setIsOpen(!isOpen)
@@ -62,74 +69,60 @@ export default ({ channel, program, ...rest }: Props) => {
 
   return (
     <div className="epg-program-item" onClick={onClick} title={title}>
-      <ProgramBox width={styles.width} style={styles.position}>
+      <ProgramBox width={styles.width} style={styles.position}
+        className="hover:z-10 hover:w-auto!">
         <ProgramContent
           width={styles.width}
           isLive={isLive}
+          className="backdrop-blur-sm p-0!"
           style={{
-            background: isActive
-              ? providerBackgrounds.active
-              : isLive
-                ? ((providerBackgrounds[
-                    data.providedBy
-                      ?.provider as keyof typeof providerBackgrounds
-                  ] || providerBackgrounds.default) as string)
-                : "rgba(100, 100, 100, 0.3)",
-            padding: 0,
+            background,
           }}
         >
-          <ProgramFlex
-            style={{
-              padding: isDesktop && isMinWidth ? "0.5rem" : undefined,
-            }}
-          >
-            {image ? <ProgramImage
-              src={image}
-              alt="Preview"
-              style={{
-                width: !isMinWidth ? "100%" : undefined,
-              }}
-            /> : null}
-            {isMinWidth && (
-              <ProgramStack>
-                <ProgramTitle
-                  className={cn(
-                    isActive || isLive ? "text-white!": "text-foreground!"
-                  )}
+          <ProgramFlex>
+            {image ?
+              <figure>
+                <ProgramImage
+                  src={image}
+                  alt="Preview"
+                  className="absolute w-full! object-cover mask-[linear-gradient(to_right,black_70%,transparent)]"
                   style={{
-                    fontSize: isDesktop ? undefined : "0.8rem",
-                    fontWeight: 250,
-                    marginTop: isDesktop ? undefined : "0.125rem",
-                    marginBottom: isDesktop ? undefined : "0.125rem",
+                    height: styles.position.height
                   }}
-                >
-                  {data.providedBy?.provider === "twitch" &&
-                  data.providedBy?.channelId
-                    ? "🔴"
-                    : ""}{" "}
-                  {title}
-                </ProgramTitle>
-                <ProgramText
-                  className={cn(
-                    isActive || isLive ? "text-muted!": "text-muted-foreground!"
-                  )}
-                  style={{
-                    fontSize: isDesktop ? undefined : "0.5rem",
-                  }}
-                >
-                  {sinceTime} - {tillTime}
-                </ProgramText>
-              </ProgramStack>
-            )}
+                />
+              </figure> :
+              null
+            }
+            <ProgramStack className={cn(
+              "px-2 py-1 relative",
+              image && "bg-linear-to-r from-black/80 to-black/0"
+            )}>
+              <h3
+                className={cn(
+                  "text-base truncate",
+                  isLive ? "text-white" : "text-foreground"
+                )}
+              >
+                {title}
+              </h3>
+              <p
+                className={cn(
+                  "text-xs truncate",
+                  isLive ? "text-muted" : "text-muted-foreground"
+                )}
+              >
+                {sinceTime} - {tillTime}
+              </p>
+            </ProgramStack>
           </ProgramFlex>
         </ProgramContent>
       </ProgramBox>
       <ProgramDetail
-        channel={channel} 
+        channel={channel}
         program={data}
         since={sinceTime}
         till={tillTime}
-        open={isOpen} 
+        open={isOpen}
         onOpenChange={setIsOpen} />
     </div>
   );

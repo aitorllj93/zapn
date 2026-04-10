@@ -8,6 +8,7 @@ import {
   DialogHeader,
   DialogTitle
 } from "../components/ui/dialog";
+import { cn } from "../lib/utils";
 
 type Props = {
   channel: {
@@ -33,41 +34,59 @@ const ProgramDetail = ({ channel, program, since, till, open, onOpenChange }: Pr
   return (
     <Dialog open={open}>
       <DialogContent>
-        <DialogHeader>
-          <DialogTitle>
-            {program.title}
-          </DialogTitle>
-          <div className="flex justify-between text-muted-foreground">          
-            <p className="line-clamp-2" title={program.subtitle}>
-              {program.subtitle !== program.title ? program.subtitle : ''}
-            </p>
-            <span className="font-mono whitespace-nowrap">
-              {since} - {till}
-            </span>
+        <div className={cn(
+          program.image && "bg-linear-to-b from-black/80 to-black/0 rounded-md"
+        )}>
+          {program.image ?
+            <figure>
+              <img src={program.image} className="absolute rounded-md mask-[linear-gradient(to_bottom,black_70%,transparent)]" />
+            </figure> :
+            null
+          }
+          <div className="pt-32 p-4 relative bg-linear-to-b from-black/80 to-black/0 rounded-md">
+            <div className="flex justify-between text-muted/60 mb-3 gap-2">
+              <div>
+                <h3
+                  className={cn(
+                    "text-lg text-white",
+                  )}>
+                  {program.title}
+                </h3>
+                <p className="line-clamp-2" title={program.subtitle}>
+                  {program.subtitle !== program.title ? program.subtitle : ''}
+                </p>
+              </div>
+              <div className="flex flex-col items-end">
+                <div className="font-mono whitespace-nowrap mb-2">
+                  {since} - {till}
+                </div>
+                {program.category ? <Badge variant="secondary" className="bg-white/15 backdrop-blur-lg text-muted">
+                  {program.category}
+                </Badge> : null}
+              </div>
+            </div>
+
+            <div className="-mx-4 no-scrollbar max-h-[30vh] overflow-y-auto px-4 mb-2">
+              <p className="mb-4 leading-normal text-muted">
+                {program.description}
+              </p>
+            </div>
+            <div>
+              <a href={channel.watchUrl ?? channel.url}>
+                <Button>
+                  {channel.logo ? <img
+                    className="brightness-0 invert p-2 h-full rounded-t-md md:rounded-t-lg mx-auto"
+                    src={channel.logo}
+                    alt={channel.name}
+                  /> : null}
+                  Ver Canal
+                </Button>
+              </a>
+            </div>
+
           </div>
-          <img src={program.image} className="rounded-sm" />
-        </DialogHeader>
-        <div className="-mx-4 no-scrollbar max-h-[30vh] overflow-y-auto px-4">
-          {program.category ? <Badge variant="secondary" className="mb-4 px-2 py-1">
-            {program.category}
-          </Badge> : null}
-          <p className="mb-4 leading-normal">
-            {program.description}
-          </p>
+
         </div>
-        <DialogFooter>
-          <a href={channel.watchUrl ?? channel.url}>
-            <Button>
-              {channel.logo ? <img
-                className="brightness-0 invert p-2 h-full rounded-t-md md:rounded-t-lg mx-auto"
-                src={channel.logo}
-                alt={channel.name}
-              /> : null}
-              Ver Canal
-            </Button>
-          </a>
-          {/* <Button variant="outline" onClick={() => onOpenChange(true)}>Cerrar</Button> */}
-        </DialogFooter>
       </DialogContent>
     </Dialog>
   );
