@@ -1,15 +1,23 @@
 ---
 import { repository } from "@/lib/epg";
-import Header from '@zapn/ui/header/index';
+import Header from '@zapn/ui/header';
+import LiveContent from '@zapn/ui/live-content/index';
 import ChannelsGrid from '@zapn/ui/channels-grid/index';
 
 import Layout from '../layouts/Layout.astro';
 
-const channels = await repository.getChannels();
+const guide = await repository.getGuide();
+
+if (!guide) {
+  return new Response(null, {
+    status: 404,
+  });
+}
 ---
 <Layout>
 	<main>
-		<Header />
-		<ChannelsGrid channels={channels}>
+		<Header client:load />
+		<LiveContent client:load guide={guide as any} />
+		<ChannelsGrid channels={guide?.channels}>
 	</main>
 </Layout>
