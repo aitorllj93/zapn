@@ -1,4 +1,12 @@
 
+import * as plutotv from './parser/providers/plutotv';
+import * as plextv from './parser/providers/plextv';
+
+export type Provider = 
+  typeof plutotv.PROVIDER_ID | 
+  typeof plextv.PROVIDER_ID |
+  'default';
+
 export type Channel = {
   uuid: string;
   logo: string;
@@ -6,7 +14,7 @@ export type Channel = {
   name: string;
   url?: string;
   watchUrl?: string;
-  provider: string;
+  provider: Provider;
   category?: string;
 }
 
@@ -23,14 +31,14 @@ export type Program = {
   category?: string;
   season?: number;
   episode?: number;
-  provider: string;
+  provider: Provider;
 }
 
 export type EPG = {
   key?: string;
   label?: string;
   category?: string;
-  provider?: string;
+  provider?: Provider;
   channels: Channel[];
   programs: Program[];
 }
