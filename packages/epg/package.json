@@ -17,6 +17,7 @@
 	},
 	"dependencies": {
 		"date-fns": "^4.1.0",
-		"fast-xml-parser": "^5.5.11"
+		"fast-xml-parser": "^5.5.11",
+		"slugify": "^1.6.9"
 	}
 }

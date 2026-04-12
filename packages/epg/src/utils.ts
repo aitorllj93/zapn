@@ -38,3 +38,12 @@ export const set12HoursTimeFormat = (isBaseTimeFormat?: boolean) => {
   if (isBaseTimeFormat) return "h:mm a";
   return "HH:mm";
 };
+
+export const isUrl = (value: string): boolean => {
+  try {
+    new URL(value);
+    return true;
+  } catch {
+    return false;
+  }
+}

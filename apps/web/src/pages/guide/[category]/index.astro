@@ -5,18 +5,18 @@ import Layout from "@/layouts/Layout.astro";
 import { repository } from "@/lib/epg";
 
 export async function getStaticPaths() {
-  const guides = await repository.getGuides();
-  return guides.map((g) => ({
+  const categories = await repository.getCategories();
+  return categories.map((c) => ({
     params: {
-      provider: g.provider,
+      category: c.slug,
     },
   }));
 }
 
-const { provider } = Astro.params;
+const { category } = Astro.params;
 
 const guide = await repository.getGuide({
-  provider,
+  category,
 });
 
 if (!guide) {

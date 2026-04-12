@@ -1,20 +1,23 @@
 ---
 import EPG from "@zapn/ui/epg";
+import Heading from "@zapn/ui/heading";
 
 import Layout from "@/layouts/Layout.astro";
 import { repository } from "@/lib/epg";
 
+
 const guides = await repository.getGuidesAsCategories();
+
 ---
 <Layout>
   <main>
-    {guides.map(({ label, epg }) => (
+    {guides.map((epg) => (
       <ul>
         <li>
-          <h2>
-            {label}
-          </h2>
-          <EPG client:load channels={epg.channels} programs={epg.programs} style={{ height: '100dvh', width: '100dvw' }} />
+          <Heading id={epg.key}>
+            {epg.label}
+          </Heading>
+          <EPG client:load channels={epg.channels} programs={epg.programs} style={{ height: '100dvh', maxWidth: '100dvw' }} />
         </li>
       </ul>
     ))}

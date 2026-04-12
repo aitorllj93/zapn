@@ -17,7 +17,7 @@ if (!guide) {
 <Layout>
 	<main>
 		<Header client:load />
-		<LiveContent client:load guide={guide as any} />
-		<ChannelsGrid channels={guide?.channels}>
+		<LiveContent client:load guide={guide} />
+		<ChannelsGrid channels={guide.channels}>
 	</main>
 </Layout>

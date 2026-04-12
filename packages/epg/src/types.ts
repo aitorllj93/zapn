@@ -27,21 +27,15 @@ export type Program = {
 }
 
 export type EPG = {
+  key?: string;
+  label?: string;
+  category?: string;
   provider?: string;
   channels: Channel[];
   programs: Program[];
 }
 
-type EPGFilterParams = {
-  provider?: string[]|string;
-};
-
-export type EPGRepository = {
-  getChannels(filter?: EPGFilterParams): Promise<Channel[]>;
-  getGuide(filter?: EPGFilterParams): Promise<EPG|undefined>;
-  getGuides(): Promise<EPG[]>;
-  getGuidesAsCategories(filter?: EPGFilterParams): Promise<{
-    label: string;
-    epg: EPG;
-  }[]>;
+export type Category = {
+  slug: string;
+  label: string;
 }
